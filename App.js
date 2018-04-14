@@ -37,7 +37,9 @@ export default class App extends React.Component {
       <View style={styles.container}>
         <Deck
           data={data}
-          renderCard={this.renderCard}/>
+          renderCard={this.renderCard}
+          // onSwipeRight={() => console.log('something moved')}
+        />
       </View>
     );
   }
