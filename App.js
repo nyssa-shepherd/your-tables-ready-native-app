@@ -32,13 +32,23 @@ export default class App extends React.Component {
     )
   }
 
+  renderNoMoreCards() {
+    return (
+      <Card title='No more cards'>
+        <Text style={{ marginBottom: 10 }}>
+          There are no more cards.
+        </Text>
+      </Card>
+    )
+  }
+
   render() {
     return (
       <View style={styles.container}>
         <Deck
           data={data}
           renderCard={this.renderCard}
-          // onSwipeRight={() => console.log('something moved')}
+          renderNoMoreCards={this.renderNoMoreCards}
         />
       </View>
     );
