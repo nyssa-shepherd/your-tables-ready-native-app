@@ -37,6 +37,12 @@ class Deck extends Component {
     LayoutAnimation.spring();
   }
 
+  componentWillReceiveProps(nextProps) {
+    if(nextProps.data !== this.props.data) {
+      this.setState({ index: 0 })
+    }
+  }
+
   getCardStyle() {
     const { position } = this.state;
     const rotate = position.x.interpolate({
