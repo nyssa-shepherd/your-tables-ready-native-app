@@ -4,18 +4,29 @@ class Home extends Component {
   constructor() {
     super();
     this.state = {
-
+      restaurants: null
     }
   }
 
   componentDidMount = async() => {
-    const initalFetch = await fetch('/api/v1/restaurants');
-    console.log(await initalFetch.json());
+    const initalFetch = await fetch('localhost:3000/api/v1/restaurants');
+    const restaurants = await initalFetch.json();
+    this.setState({ restaurants }, () => {
+      console.log(this.state.restaurants)
+    });
   }
 
   render() {
     return (
-      <View></View>
+      <View>
+        {
+          this.state.restaurants.map(restaurant => {
+            return (
+              <Text>{restaurant.name}</Text>
+            )
+          })
+        }
+      </View>
     )
   }
 }

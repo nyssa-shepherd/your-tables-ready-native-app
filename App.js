@@ -16,7 +16,7 @@ export default class App extends React.Component {
       makeReservation: { screen: MakeReservationScreen }
     },
     {
-      swipeEnabled: true,
+      swipeEnabled: false,
       lazy: false, 
     });
 
