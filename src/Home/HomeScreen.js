@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Button } from 'react-native-elements';
 import { View, Text, TextInput, StyleSheet, Dimensions } from 'react-native';
+import Header from '../Header/Header';
 
 class HomeScreen extends Component {
   static navigationOptions = {
@@ -13,8 +14,6 @@ class HomeScreen extends Component {
         <View style={styles.form}>
           <TextInput style={styles.input} 
                     placeholder='Search' />
-          <Button title='Search'
-                  style={styles.button} />
         </View>
       </View>
     )
@@ -23,16 +22,22 @@ class HomeScreen extends Component {
 
 const styles = StyleSheet.create({
   form: {
+    backgroundColor: 'red',
     display: 'flex',
-    flexDirection: 'row'
+    flexDirection: 'row',
+    paddingBottom: 30,
+    paddingTop: 30
   },
   input: {
+    backgroundColor: 'white',
     borderColor: 'grey',
+    borderRadius: 25,
     borderWidth: 0.5,
-    height: 50,
-    marginRight: 0,
+    height: 30,
+    marginLeft: 'auto',
+    marginRight: 'auto',
     paddingLeft: 10,
-    width: (Dimensions.get('window').width - 100)
+    width: (Dimensions.get('window').width - 60)
   },
   button: {
     padding: 5,

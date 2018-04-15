@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Button } from 'react-native-elements';
 import DatePicker from 'react-native-datepicker';
 import { View, Text, TextInput, DateInput, StyleSheet } from 'react-native';
+import Header from '../Header/Header';
 
 class MakeReservationScreen extends Component {
   static navigationOptions = {
@@ -11,7 +12,7 @@ class MakeReservationScreen extends Component {
   render() {
     return (
       <View>
-        <Text style={styles.titleText}>Make a Reservation</Text>
+        <Header text='Make a Reservation'/>
         <TextInput style={styles.input}
                    placeholder='Name'/>
         <DatePicker style={styles.datePicker}
