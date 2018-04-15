@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, TextInput, StyleSheet, Dimensions } from 'react-native';
 
-class Home extends Component {
+class HomeScreen extends Component {
   static navigationOptions = {
     title: 'Home'
   };
@@ -28,4 +28,4 @@ const styles = StyleSheet.create({
   }
 })
 
-export default Home;
+export default HomeScreen;
