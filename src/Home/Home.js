@@ -9,7 +9,7 @@ class Home extends Component {
   }
 
   componentDidMount = async() => {
-    const initalFetch = await fetch('localhost:3000/api/v1/restaurants');
+    const initalFetch = await fetch('http://localhost:3000/api/v1/restaurants');
     const restaurants = await initalFetch.json();
     this.setState({ restaurants }, () => {
       console.log(this.state.restaurants)

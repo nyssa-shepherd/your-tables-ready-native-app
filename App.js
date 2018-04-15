@@ -8,7 +8,6 @@ import MakeReservationScreen from './src/Screens/MakeReservationScreen';
 import UpcomingReservationScreen from './src/Screens/UpcomingReservationScreen';
 
 export default class App extends React.Component {
-
   render() {
     const MainNavigator = TabNavigator({
       home: { screen: HomeScreen },
@@ -17,12 +16,12 @@ export default class App extends React.Component {
     },
     {
       swipeEnabled: false,
-      lazy: false, 
+      lazy: false,
     });
 
     return (
       <View style={styles.container}>
-        <MainNavigator />
+        <MainNavigator style={styles.whatev}/>
       </View>
     );
   }
@@ -31,6 +30,6 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     marginTop: 50,
-    flex: 1
-  },
+    flex: 1,
+  }
 });
