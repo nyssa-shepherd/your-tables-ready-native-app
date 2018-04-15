@@ -23,9 +23,9 @@ class MakeReservationScreen extends Component {
                 style={styles.submitBtn} />
         
       </View>
-    )
+    );
   }
-}
+};
 
 const styles = StyleSheet.create({
   titleText: {
