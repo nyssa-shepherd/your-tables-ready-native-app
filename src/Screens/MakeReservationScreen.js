@@ -10,7 +10,7 @@ class MakeReservationScreen extends Component {
   render() {
     return (
       <View>
-        <Text>Make a Reservation</Text>
+        <Text style={styles.titleText}>Make a Reservation</Text>
         <TextInput style={styles.input}
                    placeholder='Name'/>
         <TextInput style={styles.input}
@@ -28,6 +28,13 @@ class MakeReservationScreen extends Component {
 }
 
 const styles = StyleSheet.create({
+  titleText: {
+    fontSize: 34,
+    marginBottom: 40,
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    marginTop: 20
+  },
   input: {
     backgroundColor: 'pink',
     fontSize: 24,
@@ -35,6 +42,7 @@ const styles = StyleSheet.create({
     marginLeft: 'auto',
     marginRight: 'auto',
     marginTop: 10,
+    paddingLeft: 10,
     width: 350
   },
   submitBtn: {
