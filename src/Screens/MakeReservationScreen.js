@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Button } from 'react-native-elements';
 import { View, Text, TextInput, StyleSheet } from 'react-native';
 
 class MakeReservationScreen extends Component {
@@ -18,6 +19,9 @@ class MakeReservationScreen extends Component {
                    placeholder='Time'/>
         <TextInput style={styles.input}
                    placeholder='Number of People'/>
+        <Button title='Make Reservation'
+                style={styles.submitBtn} />
+        
       </View>
     )
   }
@@ -31,6 +35,13 @@ const styles = StyleSheet.create({
     marginLeft: 'auto',
     marginRight: 'auto',
     marginTop: 10,
+    width: 350
+  },
+  submitBtn: {
+    height: 60,
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    marginTop: 40,
     width: 350
   }
 });
