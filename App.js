@@ -4,6 +4,7 @@ import { TabNavigator, StackNavigator } from 'react-navigation';
 import { Card, Button } from 'react-native-elements';
 
 import HomeScreen from './src/Home/HomeScreen';
+import SearchScreen from './src/Search/SearchScreen';
 import MakeReservationScreen from './src/Screens/MakeReservationScreen';
 import UpcomingReservationScreen from './src/Screens/UpcomingReservationScreen';
 
@@ -12,7 +13,8 @@ export default class App extends React.Component {
     const MainNavigator = TabNavigator({
       home: { screen: HomeScreen },
       upcomingReservation: { screen: UpcomingReservationScreen },
-      makeReservation: { screen: MakeReservationScreen }
+      makeReservation: { screen: MakeReservationScreen },
+      search: { screen: SearchScreen }
     },
     {
       swipeEnabled: false,
@@ -21,7 +23,7 @@ export default class App extends React.Component {
 
     return (
       <View style={styles.container}>
-        <MainNavigator style={styles.whatev}/>
+        <MainNavigator style={styles.navBar}/>
       </View>
     );
   }
@@ -29,7 +31,9 @@ export default class App extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 50,
     flex: 1,
+  },
+  navBar: {
+    backgroundColor: 'blue'
   }
 });

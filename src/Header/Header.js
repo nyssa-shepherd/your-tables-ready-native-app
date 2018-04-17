@@ -19,16 +19,17 @@ class Header extends Component {
 }
 const styles = StyleSheet.create({
   header: {
-    backgroundColor: 'red',
+    backgroundColor: 'navy',
+    borderBottomColor: 'blue',
+    borderBottomWidth: 1,
     height: 90,
-    marginBottom: 30
+    marginBottom: 30,
+    paddingTop: 40
   },
   headding : {
     fontSize: 28,
-    marginBottom: 'auto',
     marginLeft: 'auto',
-    marginRight: 'auto',
-    marginTop: 'auto'
+    marginRight: 'auto'
   }
 });
 
