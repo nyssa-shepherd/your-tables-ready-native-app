@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, Image, StyleSheet, Dimensions } from 'react-native';
+import MakeReservationButton from '../MakeReservation/MakeReservationButton';
+
 class Home extends Component {
   constructor() {
     super();
@@ -21,6 +23,7 @@ class Home extends Component {
           <View key={restaurant.id}>
             <Image source={{ uri: restaurant.img_url }}
                    style={styles.img} />
+            <MakeReservationButton />
           </View>
         )
       })
@@ -36,7 +39,8 @@ class Home extends Component {
 
 const styles = StyleSheet.create({
   img: {
-    height: 400,
+    height: 500,
+    marginBottom: 'auto',
     width: Dimensions.get('window').width
   }
 });
