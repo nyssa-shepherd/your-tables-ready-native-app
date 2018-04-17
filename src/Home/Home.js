@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, Image } from 'react-native';
+import { View, Text, Image, StyleSheet, Dimensions } from 'react-native';
 class Home extends Component {
   constructor() {
     super();
@@ -18,9 +18,9 @@ class Home extends Component {
     const restaurants = this.state.restaurants ? 
       this.state.restaurants.map(restaurant => {
         return (
-          <View>
+          <View key={restaurant.id}>
             <Image source={{ uri: restaurant.img_url }}
-                   style={{ width: 400, height: 400 }} />
+                   style={styles.img} />
           </View>
         )
       })
@@ -33,5 +33,12 @@ class Home extends Component {
     )
   }
 }
+
+const styles = StyleSheet.create({
+  img: {
+    height: 400,
+    width: Dimensions.get('window').width
+  }
+});
 
 export default Home;
