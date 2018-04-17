@@ -3,10 +3,11 @@ import { Button } from 'react-native-elements';
 import DatePicker from 'react-native-datepicker';
 import { View, Text, TextInput, DateInput, StyleSheet } from 'react-native';
 import Header from '../Header/Header';
+import { Icon } from 'react-native-elements';
 
 class MakeReservationScreen extends Component {
   static navigationOptions = {
-    title: 'Make a Reservation'
+    title: 'Make a Reservation',
   };
 
   render() {

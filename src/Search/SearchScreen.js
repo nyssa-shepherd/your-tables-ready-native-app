@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
-import { Button } from 'react-native-elements';
+import { Button, Icon } from 'react-native-elements';
 import { View, Text, TextInput, StyleSheet, Dimensions } from 'react-native';
 
 class SearchScreen extends Component {
   static navigationOptions = {
-    title: 'Search',    
+    title: 'Search', 
+    tabBarIcon: () => {
+      return <Icon name='search' size={30} />
+    }   
   };
 
   render() {
