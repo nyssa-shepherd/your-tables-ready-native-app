@@ -14,18 +14,20 @@ class Home extends Component {
     this.setState({ restaurants }, () => {
       console.log(this.state.restaurants)
     });
+    console.log(restaurants)
   }
 
   render() {
+    
     return (
       <View>
-        {
+        {/* {
           this.state.restaurants.map(restaurant => {
             return (
               <Text>{restaurant.name}</Text>
             )
           })
-        }
+        } */}
       </View>
     )
   }
