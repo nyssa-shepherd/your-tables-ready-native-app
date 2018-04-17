@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, Image } from 'react-native';
 class Home extends Component {
   constructor() {
     super();
@@ -18,7 +18,10 @@ class Home extends Component {
     const restaurants = this.state.restaurants ? 
       this.state.restaurants.map(restaurant => {
         return (
-          <Text>{restaurant.restaurant_name}</Text>
+          <View>
+            <Image source={{ uri: restaurant.img_url }}
+                   style={{ width: 400, height: 400 }} />
+          </View>
         )
       })
       : null;
