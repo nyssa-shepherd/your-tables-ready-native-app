@@ -51,7 +51,7 @@ class SearchScreen extends Component {
 
   render() {
     const { returnedRestaurant, locations } = this.state;
-    const restaurantName = returnedRestaurant ? <Text>{returnedRestaurant.restaurant_name}</Text> : null;
+    const restaurantName = returnedRestaurant ? <Text style={styles.name}>{returnedRestaurant.restaurant_name}</Text> : null;
     const showLocations = locations ? 
       locations.map(location => {
         return (
@@ -100,6 +100,13 @@ class SearchScreen extends Component {
 
 
 const styles = StyleSheet.create({
+  name: {
+    fontWeight: '700',
+    fontSize: 24,
+    marginBottom: 20,
+     marginTop: 20
+  },
+
   container: {
     display: 'flex',
     flexDirection: 'column'
