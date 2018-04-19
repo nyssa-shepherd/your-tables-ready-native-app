@@ -40,7 +40,8 @@ class Home extends Component {
 
 const styles = StyleSheet.create({
   img: {
-    height: 500,
+    height: 300,
+    marginTop: 90,
     marginBottom: 'auto',
     width: Dimensions.get('window').width
   }

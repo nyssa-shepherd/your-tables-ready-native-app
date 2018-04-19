@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 import { Icon } from 'react-native-elements';
 import Header from '../Header/Header';
 
@@ -15,10 +15,18 @@ class UpcomingReservationScreen extends Component {
     return (
       <View>
         <Header text='Upcoming Reservations' />
-        <Text>You do not have any upcoming reservations at this time.</Text>
+        <Text style={styles.text}>You do not have any upcoming reservations at this time.</Text>
       </View>
     );
   }
 };
+
+const styles = StyleSheet.create({
+    text: {
+      fontSize: 24,
+      fontWeight: '700',
+      marginLeft: 30
+    }
+})
 
 export default UpcomingReservationScreen;
