@@ -27,6 +27,7 @@ const styles = StyleSheet.create({
     paddingTop: 40
   },
   headding : {
+    color: 'white',
     fontSize: 28,
     marginLeft: 'auto',
     marginRight: 'auto'
