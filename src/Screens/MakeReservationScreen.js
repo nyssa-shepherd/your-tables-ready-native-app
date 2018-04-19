@@ -7,7 +7,7 @@ import { Icon } from 'react-native-elements';
 
 class MakeReservationScreen extends Component {
   static navigationOptions = {
-    title: 'Make a Reservation',
+    title: 'Reserve',
   };
 
   constructor() {
@@ -20,14 +20,28 @@ class MakeReservationScreen extends Component {
     }
   }
 
+  updateState = (text, name) => {
+    console.log(name)
+    // this.setState({ [name]: text })
+  }
+
+  makeReservation = () => {
+    console.log(this.state)
+  }
+
+  // postReservation = async() => {
+  //   const post = await fetch('')
+  // }
+
+
   render() {
     return (
       <View>
         <Header text='Make a Reservation'/>
-        <TextInput style={styles.input}
-                   value={this.state.name}
-                   onTextChange={ (text) => this.updateState(text) }
-                   placeholder='Name'/>
+        <TextInput style={styles.input} 
+                    placeholder='Name'
+                    value={this.state.restaurant}
+                    onChangeText={(text) => this.updateState(text, 'name')} />
         <DatePicker style={styles.datePicker}
                     mode="date"
                     placeholder="Select Date"
@@ -44,18 +58,19 @@ class MakeReservationScreen extends Component {
                         height: 60
                       }
                     }}
-                    onDateChange={(date) => {this.setState({date: date})}}
+                    onDateChange={(date) => { this.setState({date: date}) }}
         />
-        <TextInput style={styles.input}
-                   value={this.state.time}
-                   onTextChange={ (text) => this.updateState(text) }
-                   placeholder='Time'/>
-        <TextInput style={styles.input}
-                   value={this.state.number_of_people}
-                   onTextChange={ (text) => this.updateState(text) }
-                   placeholder='Number of People'/>
+        <TextInput style={styles.input} 
+                    placeholder='Time'
+                    value={this.state.time}
+                    onChangeText={(text) => this.updateState(text, 'time')} />
+        <TextInput style={styles.input} 
+                    placeholder='Number of People'
+                    value={this.state.number_of_people}
+                    onChangeText={(text) => this.updateState(text, 'number_of_people')} />
         <Button title='Make Reservation'
-                style={styles.submitBtn} />
+                style={styles.submitBtn}
+                onPress={this.makeReservation} />
         
       </View>
     );
