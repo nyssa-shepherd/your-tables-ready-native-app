@@ -5,7 +5,6 @@ import { Card, Button } from 'react-native-elements';
 
 import HomeScreen from './src/Home/HomeScreen';
 import SearchScreen from './src/Search/SearchScreen';
-import MakeReservationScreen from './src/Screens/MakeReservationScreen';
 import UpcomingReservationScreen from './src/Screens/UpcomingReservationScreen';
 
 export default class App extends React.Component {
@@ -13,7 +12,6 @@ export default class App extends React.Component {
     const MainNavigator = TabNavigator({
       home: { screen: HomeScreen },
       upcomingReservation: { screen: UpcomingReservationScreen },
-      makeReservation: { screen: MakeReservationScreen },
       search: { screen: SearchScreen }
     },
     {

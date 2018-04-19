@@ -17,7 +17,7 @@ class MakeReservationButton extends Component {
   }
 
   render() {
-    const resScreen = this.state.makeRes === true ? <MakeReservationScreen /> 
+    const resScreen = this.state.makeRes === true ? <MakeReservationScreen id={this.props.id} /> 
     : null;
     return (
       <View>

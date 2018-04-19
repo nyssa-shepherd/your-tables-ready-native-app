@@ -24,19 +24,16 @@ class MakeReservationScreen extends Component {
     this.setState({ [name]: text })
   }
 
-  postReservation = async() => {
+  postReservation = async() => { 
+    console.log(this.props.id)
     const restaurant_id = this.props.id;
     const { name, date, time, number_of_people } = this.state;
     const post = await fetch(`https://restaurant-res-backend.herokuapp.com/api/v1/reservations`, {
       method: 'POST',
       body: JSON.stringify({ restaurant_id, name, date, time, number_of_people })
     });
-    console.log(post.json()) 
-}
-  // postReservation = async() => {
-  //   const post = await fetch('')
-  // }
-
+    console.log(await post.json()) 
+  }
 
   render() {
     return (
@@ -74,7 +71,7 @@ class MakeReservationScreen extends Component {
                     onChangeText={(text) => this.updateState(text, 'number_of_people')} />
         <Button title='Make Reservation'
                 style={styles.submitBtn}
-                onPress={this.makeReservation} />
+                onPress={this.postReservation} />
         
       </View>
     );
