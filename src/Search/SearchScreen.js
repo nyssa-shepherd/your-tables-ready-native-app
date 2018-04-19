@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Button, Icon } from 'react-native-elements';
 import { View, Text, TextInput, StyleSheet, Dimensions } from 'react-native';
+import MakeReservationButton from '../MakeReservation/MakeReservationButton';
 
 class SearchScreen extends Component {
   static navigationOptions = {
@@ -54,11 +55,12 @@ class SearchScreen extends Component {
     const showLocations = locations ? 
       locations.map(location => {
         return (
-          <View>
-            <Text>{location.location}</Text>
-            <Text>{location.phone_number}</Text>
-            <Text>{location.tables_open}</Text>
-            <Text>{location.wait_time}</Text>
+          <View key={location.id} style={styles.cards}>
+            <Text style={styles.details}>Location: {location.location}</Text>
+            <Text style={styles.details}>Call: {location.phone_number}</Text>
+            <Text style={styles.details}>Tables Open: {location.tables_open}</Text>
+            <Text style={styles.marginBeforeBtn}>Wait_Time{location.wait_time}</Text>
+            <MakeReservationButton />
           </View>
         );
       }) : null;
@@ -87,7 +89,9 @@ class SearchScreen extends Component {
         </View>
         <View>
           {restaurantName}
-          {showLocations}
+          <View style={styles.locationContainer}>
+            {showLocations}
+          </View>
         </View>
       </View>
     )
@@ -99,6 +103,19 @@ const styles = StyleSheet.create({
   container: {
     display: 'flex',
     flexDirection: 'column'
+  },
+  details: {
+    margin: 5
+  },
+  marginBeforeBtn: {
+    marginTop: 5,
+    marginLeft: 5,
+    marginBottom: 40
+  },
+  cards: {
+    backgroundColor: 'rgba(192,192,192,.5)',
+    marginBottom: 20,
+    paddingTop: 20
   },
   form: {
     backgroundColor: '#202020',
