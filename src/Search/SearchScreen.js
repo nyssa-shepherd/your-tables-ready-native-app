@@ -49,8 +49,20 @@ class SearchScreen extends Component {
   }
 
   render() {
-    const { returnedRestaurant } = this.state;
+    const { returnedRestaurant, locations } = this.state;
     const restaurantName = returnedRestaurant ? <Text>{returnedRestaurant.restaurant_name}</Text> : null;
+    const showLocations = locations ? 
+      locations.map(location => {
+        return (
+          <View>
+            <Text>{location.location}</Text>
+            <Text>{location.phone_number}</Text>
+            <Text>{location.tables_open}</Text>
+            <Text>{location.wait_time}</Text>
+          </View>
+        );
+      }) : null;
+
     return (
       <View style={styles.container}>
         <View style={styles.form}>
@@ -75,6 +87,7 @@ class SearchScreen extends Component {
         </View>
         <View>
           {restaurantName}
+          {showLocations}
         </View>
       </View>
     )
