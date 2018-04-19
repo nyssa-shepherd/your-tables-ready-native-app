@@ -10,11 +10,23 @@ class MakeReservationScreen extends Component {
     title: 'Make a Reservation',
   };
 
+  constructor() {
+    super();
+    this.state = {
+      name: '',
+      date: '',
+      time: '',
+      number_of_people: ''
+    }
+  }
+
   render() {
     return (
       <View>
         <Header text='Make a Reservation'/>
         <TextInput style={styles.input}
+                   value={this.state.name}
+                   onTextChange={ (text) => this.updateState(text) }
                    placeholder='Name'/>
         <DatePicker style={styles.datePicker}
                     mode="date"
@@ -35,8 +47,12 @@ class MakeReservationScreen extends Component {
                     onDateChange={(date) => {this.setState({date: date})}}
         />
         <TextInput style={styles.input}
+                   value={this.state.time}
+                   onTextChange={ (text) => this.updateState(text) }
                    placeholder='Time'/>
         <TextInput style={styles.input}
+                   value={this.state.number_of_people}
+                   onTextChange={ (text) => this.updateState(text) }
                    placeholder='Number of People'/>
         <Button title='Make Reservation'
                 style={styles.submitBtn} />
