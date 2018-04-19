@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, Image, StyleSheet, Dimensions } from 'react-native';
+import { View, Text, Image, StyleSheet, Dimensions, ScrollView } from 'react-native';
 import MakeReservationButton from '../MakeReservation/MakeReservationButton';
 
 class Home extends Component {
@@ -31,7 +31,9 @@ class Home extends Component {
 
     return (
       <View>
-        {restaurants}
+        <ScrollView horizontal='true'>
+          {restaurants}
+        </ScrollView>
       </View>
     )
   }
