@@ -12,14 +12,15 @@ class MakeReservationButton extends Component {
   }
 
   goToReservationForm = async(e) => {
-    this.setState({ makeRes: true });
+    const { makeRes } = this.state;
+    makeRes === false ? this.setState({ makeRes: true }) : this.setState({ makeRes: false })
   }
 
   render() {
-    const resScreen = this.state.makeRes === true ? <MakeReservationScreen /> : null;
+    const resScreen = this.state.makeRes === true ? <MakeReservationScreen /> 
+    : null;
     return (
       <View>
-        {resScreen}
         <Button
                title="Make a Reservation"
                titleStyle={{ fontSize: 10 }}
@@ -35,6 +36,7 @@ class MakeReservationButton extends Component {
                containerStyle={{ marginTop: 10 }}
                onPress={(e) => {this.goToReservationForm(e)}}
         />
+        {resScreen}
       </View>
     )
   }
