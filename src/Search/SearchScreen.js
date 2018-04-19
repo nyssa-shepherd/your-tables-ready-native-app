@@ -23,7 +23,7 @@ class SearchScreen extends Component {
 
 const styles = StyleSheet.create({
   form: {
-    backgroundColor: 'navy',
+    backgroundColor: '#202020',
     display: 'flex',
     flexDirection: 'row',
     paddingBottom: 40,
