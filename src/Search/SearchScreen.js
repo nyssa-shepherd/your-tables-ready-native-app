@@ -60,7 +60,7 @@ class SearchScreen extends Component {
             <Text style={styles.details}>Call: {location.phone_number}</Text>
             <Text style={styles.details}>Tables Open: {location.tables_open}</Text>
             <Text style={styles.marginBeforeBtn}>Wait_Time{location.wait_time}</Text>
-            <MakeReservationButton />
+            <MakeReservationButton id={location.id}/>
           </View>
         );
       }) : null;

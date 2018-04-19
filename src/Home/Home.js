@@ -23,7 +23,6 @@ class Home extends Component {
           <View key={restaurant.id}>
             <Image source={{ uri: restaurant.img_url }}
                    style={styles.img} />
-            <MakeReservationButton />
           </View>
         )
       })

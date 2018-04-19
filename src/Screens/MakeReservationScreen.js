@@ -21,14 +21,18 @@ class MakeReservationScreen extends Component {
   }
 
   updateState = (text, name) => {
-    console.log(name)
-    // this.setState({ [name]: text })
+    this.setState({ [name]: text })
   }
 
-  makeReservation = () => {
-    console.log(this.state)
-  }
-
+  postReservation = async() => {
+    const restaurant_id = this.props.id;
+    const { name, date, time, number_of_people } = this.state;
+    const post = await fetch(`https://restaurant-res-backend.herokuapp.com/api/v1/reservations`, {
+      method: 'POST',
+      body: JSON.stringify({ restaurant_id, name, date, time, number_of_people })
+    });
+    console.log(post.json()) 
+}
   // postReservation = async() => {
   //   const post = await fetch('')
   // }
