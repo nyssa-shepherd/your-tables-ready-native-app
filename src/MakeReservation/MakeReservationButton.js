@@ -1,28 +1,25 @@
 import React, { Component } from 'react';
 import { View, Dimensions } from 'react-native';
 import { Button } from 'react-native-elements';
+import MakeReservationScreen from '../Screens/MakeReservationScreen';
 
 class MakeReservationButton extends Component {
   constructor() {
     super();
     this.state = {
-
+      makeRes: false
     }
   }
 
   goToReservationForm = async(e) => {
-    const restaurant_id = this.props.id;
-    const { name, date, time, number_of_people } = this.state;
-    const post = await fetch(`https://restaurant-res-backend.herokuapp.com/api/v1/reservations`, {
-      method: 'POST',
-      body: JSON.stringify({ restaurant_id, name, date, time, number_of_people })
-    });
-    console.log(post.json()) 
+    this.setState({ makeRes: true });
   }
 
   render() {
+    const resScreen = this.state.makeRes === true ? <MakeReservationScreen /> : null;
     return (
       <View>
+        {resScreen}
         <Button
                title="Make a Reservation"
                titleStyle={{ fontSize: 10 }}
@@ -36,7 +33,7 @@ class MakeReservationButton extends Component {
                  marginLeft: -15
                }}
                containerStyle={{ marginTop: 10 }}
-               onPress={(e) => this.goToReservationForm(e)}
+               onPress={(e) => {this.goToReservationForm(e)}}
         />
       </View>
     )

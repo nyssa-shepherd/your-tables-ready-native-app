@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Button, Icon } from 'react-native-elements';
-import { View, Text, TextInput, StyleSheet, Dimensions } from 'react-native';
+import { View, Text, TextInput, StyleSheet, Dimensions, ScrollView } from 'react-native';
 import MakeReservationButton from '../MakeReservation/MakeReservationButton';
 
 class SearchScreen extends Component {
@@ -87,12 +87,12 @@ class SearchScreen extends Component {
                   onPress={(e) => this.submitSearch(e)}
           />
         </View>
-        <View>
+        <ScrollView>
           {restaurantName}
           <View style={styles.locationContainer}>
             {showLocations}
           </View>
-        </View>
+        </ScrollView>
       </View>
     )
   }
