@@ -15,7 +15,7 @@ class HomeScreen extends Component {
   render() {
     return (
       <View>
-        <Header text="Your Table's Ready" />
+        <Header text="your table's ready" />
         <Home />
       </View>
     )

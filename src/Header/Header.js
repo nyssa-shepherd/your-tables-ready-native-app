@@ -19,9 +19,7 @@ class Header extends Component {
 }
 const styles = StyleSheet.create({
   header: {
-    backgroundColor: 'navy',
-    borderBottomColor: 'blue',
-    borderBottomWidth: 1,
+    backgroundColor: '#202020',
     height: 90,
     marginBottom: 30,
     paddingTop: 40
