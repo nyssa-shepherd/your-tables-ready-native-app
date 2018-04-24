@@ -19,4 +19,4 @@
 * Open expo 
 * Click open existing project
 * Open this project
-* To open simulator with Xcode: Once its done loading click `device` and then `open IOS simulator` || To open simulator on your phone: Once its done loadion click `Share` and then enter your phone number
+* To open simulator with Xcode: Once its done loading click `device` and then `open IOS simulator` || To open simulator on your phone: click `Share` and then enter your phone number then click on the link texted to you
