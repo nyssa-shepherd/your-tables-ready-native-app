@@ -1,5 +1,9 @@
 # your table's ready (Client Side)
 
+## About 
+
+This was my idea I had for one of my final projects at Turing School of Software and Design. The purpose of "your table's ready" was to make making restaurant reservations in an easier fashion. The user-client side of this project allows customers to look up the wait time and current amount of tables available for a particular restaurant and also allows them to create a reservation for a restaurant from their mobile devices.
+
 ## Tech Stack
 
 * JavaScript
