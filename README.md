@@ -5,6 +5,12 @@
 * JavaScript
 * React Native
 
+## Corresponding Repos 
+
+[Back-End Repo](https://github.com/nyssakeller/your-tables-ready-backend)
+
+[Admin Client Side (React) Repo](https://github.com/nyssakeller/your-tables-ready-admin)
+
 ## Setup
 
 * Install Xcode and Expo (download Expo on your phone as well if you want to open the simulator on you phone) if you don't have it already
