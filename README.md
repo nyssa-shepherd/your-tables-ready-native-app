@@ -11,6 +11,11 @@
 
 [Admin Client Side (React) Repo](https://github.com/nyssakeller/your-tables-ready-admin)
 
+## Learning Goals
+
+* Becoming familiar with React Native
+* Learning difference between web development and mobile development
+
 ## Setup
 
 * Install Xcode and Expo (download Expo on your phone as well if you want to open the simulator on you phone) if you don't have it already
