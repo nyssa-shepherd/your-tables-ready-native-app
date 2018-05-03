@@ -7,9 +7,9 @@
 
 ## Corresponding Repos 
 
-[Back-End Repo](https://github.com/nyssakeller/your-tables-ready-backend)
+* [Back-End Repo](https://github.com/nyssakeller/your-tables-ready-backend)
 
-[Admin Client Side (React) Repo](https://github.com/nyssakeller/your-tables-ready-admin)
+* [Admin Client Side (React) Repo](https://github.com/nyssakeller/your-tables-ready-admin)
 
 ## Learning Goals
 
